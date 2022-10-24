@@ -3,6 +3,8 @@ import React from 'react'
 import {BrowserRouter, Link} from "react-router-dom";
 import AppRoutes from './Routes';
 
+import Container from './components/layout/Container';
+
 function App() {
   return (
     <>
@@ -13,8 +15,11 @@ function App() {
           <Link to="/contato">Contato</Link>
           <Link to="/novo-projeto">Novo Projeto</Link>
         </nav>
-        <AppRoutes />
+        <Container customClass="minHeight">
+          <AppRoutes />
+        </Container>
       </BrowserRouter>
+      <h3>Footer</h3>
     </>
   );
 }
