@@ -1,23 +1,25 @@
 import './index.css';
 import React from 'react' 
-
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Link} from "react-router-dom";
 import AppRoutes from './Routes';
 
 import Container from './components/layout/Container';
-import Nav from './components/layout/Nav';
-import Footer from './components/layout/Footer';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Nav/>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/empresa">Empresa</Link>
+          <Link to="/contato">Contato</Link>
+          <Link to="/novo-projeto">Novo Projeto</Link>
+        </nav>
         <Container customClass="minHeight">
           <AppRoutes />
         </Container>
       </BrowserRouter>
-      <Footer/>
+      <h3>Footer</h3>
     </>
   );
 }
